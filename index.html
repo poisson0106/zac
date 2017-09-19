@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/course.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row" id="app">
+      <div class="col-sm-3" style="margin-left:12.5%">
+        <div class="thumbnail">
+          <img src="img/2-learn-线下课程1-1.jpg">
+          <div class="caption">
+            <h3>设计流程与视觉表现</h3>
+            <p>Design Process</br>
+              and Visual Communication</p>
+            <p>
+              <a href="#" class="btn btn-primary" role="button" @click="doPromptReg">报名</a>
+            </p>
+          </div>
+          <div class="tag"><img src="img/Level-1.png" width="70%" height="70%"></div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="img/2-learn-线下课程1-1.jpg">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p>
+              <a href="#" class="btn btn-primary" role="button">Button</a>
+              <a href="#" class="btn btn-default" role="button">Button</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="img/2-learn-线下课程1-1.jpg">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p>
+              <a href="#" class="btn btn-primary" role="button">Button</a>
+              <a href="#" class="btn btn-default" role="button">Button</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="regLayer">
+    <transition name="modal">
+      <div class="regOutLayer" v-if="showReg">
+        <div class="panel panel-warning regContent" v-if="showReg">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Panel title<button type="button" class="close" aria-label="Close" @click="handleClose"><span aria-hidden="true">&times;</span></button>
+            </h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+    </transition>
+  </div>
+</body>
+<script type="text/javascript" src="js/thumbnail.js"></script>
+<script type="text/javascript" src="js/reg.js"></script>
+</html>

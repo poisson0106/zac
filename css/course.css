@@ -75,6 +75,17 @@ body{
     padding-bottom: 100px;
 }
 
+.product{
+    -webkik-filter : opacity(40%);
+    filter : opacity(40%);
+    transition: filter 1s
+}
+
+.product:hover{
+    -webkik-filter : opacity(1);
+    filter: opacity(1);
+}
+
 
 @media (min-width: 768px){
     .firstCol{
